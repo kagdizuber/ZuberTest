@@ -1,9 +1,5 @@
 image: curlimages/curl:latest
 
-workflow:
-  rules:
-    - if: 
-
 stages:
   - upload
   - download
@@ -11,10 +7,9 @@ stages:
 upload:
   stage: upload
   script:
-    - 'echo $PACKAGE_VERSION > date.txt'
-    - 'date >> date.txt'
-    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file date.txt ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/ci-upload-package/$PACKAGE_VERSION/date.txt'
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file path/to/file.txt "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/my_package/0.0.1/file.txt"'
 
-
-    
-
+download:
+  stage: download
+  script:
+    - 'wget --header="JOB-TOKEN: $CI_JOB_TOKEN" ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/my_package/0.0.1/file.txt'
