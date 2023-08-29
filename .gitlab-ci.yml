@@ -1,15 +1,19 @@
 image: curlimages/curl:latest
 
 stages:
-  - upload
-  - download
+  - build
+  - test
 
-upload:
-  stage: upload
+build_job:
+  stage: build
   script:
-    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file path/to/file.txt "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/my_package/0.0.1/file.txt"'
-
-download:
-  stage: download
+    - mkdir test
+    - echo "hello test!" > build/test.txt
+    - touch build/test.txt
+  artifacts:
+    paths:
+      - build/test.txt
+test_job:
+  stage: test
   script:
-    - 'wget --header="JOB-TOKEN: $CI_JOB_TOKEN" ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/my_package/0.0.1/file.txt'
+    - cat build/test.txt
