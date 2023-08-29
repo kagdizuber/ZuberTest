@@ -7,7 +7,7 @@ stages:
 build_job:
   stage: build
   script:
-    - mkdir test
+    - mkdir build
     - echo "hello test!" > build/test.txt
     - touch build/test.txt
   artifacts:
