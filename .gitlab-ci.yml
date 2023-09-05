@@ -1,21 +1,7 @@
 stages:
-  - build
-  - test
+  
   - deploy
 
-build_job:
-  stage: build
-  script:
-    - mkdir build
-    - echo "hello test!" > build/test.txt
-    - touch build/test.txt
-  artifacts:
-    paths:
-      - build/test.txt
-test_job:
-  stage: test
-  script:
-    - cat build/test.txt
 
 deploy_job:
   stage: deploy
@@ -23,3 +9,4 @@ deploy_job:
     - echo 'test'
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
+    - powershell -Command "Get-Date"
