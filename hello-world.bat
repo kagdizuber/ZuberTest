@@ -1,3 +1,3 @@
-ECHO OFF
+ECHO on
 ECHO "Hello World"
-PAUSE
+VER
