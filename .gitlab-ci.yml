@@ -3,6 +3,7 @@ image: curlimages/curl:latest
 stages:
   - build
   - test
+  - deploy
 
 build_job:
   stage: build
@@ -17,3 +18,10 @@ test_job:
   stage: test
   script:
     - cat build/test.txt
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo 'test'
+    - chmod +x ./hello-world.bat
+    - ./hello-world.bat
