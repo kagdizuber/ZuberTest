@@ -19,7 +19,5 @@ deploy_job:
   script:
     - echo 'test'
     - chmod +x ./hello-world.bat
-    - mkdir new
-    - cp -r build  new
     - ./hello-world.bat
     - powershell -Command "Get-Date"
