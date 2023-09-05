@@ -21,7 +21,7 @@ deploy_job:
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
     - powershell -Command "Get-Date"
-    - mkdir new
+    - New-item –itemtype directory –path /root/new
     - mv build  new
     - cd new
     - cat test.txt
