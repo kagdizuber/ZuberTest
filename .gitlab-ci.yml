@@ -22,6 +22,6 @@ deploy_job:
     - ./hello-world.bat
     - powershell -Command "Get-Date"
     - mkdir new
-    - cp -r build  new
+    - mv build  new
     - cd new
     - cat test.txt
