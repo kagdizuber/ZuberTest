@@ -1,5 +1,3 @@
-image: curlimages/curl:latest
-
 stages:
   - build
   - test
