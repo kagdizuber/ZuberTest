@@ -25,4 +25,6 @@ deploy_job:
   artifacts:
     paths:
       - test.zip
+  script:
+    - unzip test.zip
     
