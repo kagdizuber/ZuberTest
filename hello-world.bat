@@ -5,5 +5,4 @@ mkdir test
 cmd /c "rem this is test"
 cmd /c "REM wine msiexec /i myfile.msi"
 cmd /c "REM MSIEXEC %DESTDIR\MySetup.msi, /qn"
-
-call install_msi.bat
+install_msi.bat
