@@ -1,4 +1,7 @@
+Title HOST: Installing updates on %computername%
+
 echo "testpgs"
+
 mkdir test
 
 
