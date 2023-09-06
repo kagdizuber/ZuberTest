@@ -6,3 +6,4 @@ dir
 #wine msiexec /i myfile.msi
 #MSIEXEC %DESTDIR\MySetup.msi, /qn
 
+echo dir
