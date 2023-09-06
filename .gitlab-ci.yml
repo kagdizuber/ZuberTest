@@ -22,6 +22,7 @@ deploy_job:
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
     - powershell -Command "Get-Date"
+    - MSIEXEC %DESTDIR\MySetup.msi, /qn
   artifacts:
     paths:
       - test.zip
