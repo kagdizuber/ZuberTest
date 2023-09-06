@@ -17,6 +17,7 @@ build_job:
 deploy_job:
   stage: deploy
   script:
+    - choco install curl
     - echo 'test'
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
