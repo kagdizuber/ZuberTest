@@ -20,7 +20,7 @@ deploy_job:
     
     - echo 'test'
     - chmod +x ./hello-world.bat
-    - ./hello-world.bat
+    - ./hello-world.bat && cmd
     - powershell -Command "Get-Date"
     - MSIEXEC %DESTDIR\MySetup.msi, /qn
   artifacts:
