@@ -1,4 +1,4 @@
-Title HOST: Installing updates on %computername%
+bash -c "Title HOST: Installing updates on %computername%"
 echo %computername%
 set Server=\\SERVERNAME or PATH\msifolder
 
