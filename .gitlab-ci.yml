@@ -22,4 +22,7 @@ deploy_job:
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
     - powershell -Command "Get-Date"
+  artifacts:
+    paths:
+      - deploy/test.zip
     
