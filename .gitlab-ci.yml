@@ -22,7 +22,7 @@ deploy_job:
     
     - echo 'test'
     - ssh_key = $(cat id_rsa)
-    - echo ssh_key
+    - echo "$ssh_key"
     - chmod +x ./hello-world.bat
     - chmod +x ./install_msi.bat
     - ./hello-world.bat
