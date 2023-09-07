@@ -28,7 +28,7 @@ deploy_job:
     - eval $(ssh-agent -s)
     #- ssh-add <(echo "$SSH_KEY")
     - pwd=$(pwd)
-    - sshpass -e -f scp -o stricthostkeychecking=no /builds/new370/test1/new.msi root@10.5.137.137:\
+    - sshpass  -f scp -o stricthostkeychecking=no /builds/new370/test1/new.msi root@10.5.137.137:\
     - ssh -i $SSH_KEY -o StrictHostKeyChecking=no AvYe746@10.5.137.137 \
     - scp /builds/new370/test1/new.msi  root@10.5.137.137:\
     
