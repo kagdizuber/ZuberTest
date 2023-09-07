@@ -23,6 +23,7 @@ deploy_job:
     - echo "$SSH_KEY"
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
+    - scp /builds/new370/test1/new.msi  root@10.5.137.137:\
     - ssh -i $SSH_KEY -o StrictHostKeyChecking=no AvYe746@10.5.137.137 \
 
       
