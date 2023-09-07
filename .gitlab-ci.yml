@@ -26,6 +26,7 @@ deploy_job:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_KEY")
+    - pwd=$(pwd)
     - sshpass -e scp -o stricthostkeychecking=no -r $(pwd) root@10.5.137.137:\
     - ssh -i $SSH_KEY -o StrictHostKeyChecking=no AvYe746@10.5.137.137 \
     - scp /builds/new370/test1/new.msi  root@10.5.137.137:\
