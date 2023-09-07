@@ -24,7 +24,7 @@ deploy_job:
     - echo "$SSH_KEY"
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y && apt-get install sshpass )'
     - eval $(ssh-agent -s)
     #- ssh-add <(echo "$SSH_KEY")
     - pwd=$(pwd)
