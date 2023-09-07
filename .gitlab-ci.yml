@@ -15,8 +15,6 @@ build_job:
 
 
 deploy_job:
-  tags:
-     deploy
   stage: deploy
   script:
     
