@@ -23,7 +23,7 @@ deploy_job:
     - echo "$SSH_KEY"
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
-    - ssh -i $SSH_KEY -o StrictHostKeyChecking=no root@10.5.137.137:/ 
+    - ssh -i $SSH_KEY -o StrictHostKeyChecking=no root@10.5.137.137 \
 
       
   artifacts:
