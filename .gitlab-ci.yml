@@ -9,6 +9,7 @@ build_job:
     - mkdir build
     - echo "hello test!" > build/test.txt
     - touch build/test.txt
+    - pwd
   artifacts:
     paths:
       - build/test.txt
