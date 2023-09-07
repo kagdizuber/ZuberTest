@@ -17,7 +17,7 @@ build_job:
 deploy_job:
   stage: deploy
   script:
-    
+    - chmod og= $ID_RSA
     - echo 'test'
     - SSH_KEY=$(cat id_rsa)
     - echo "$SSH_KEY"
