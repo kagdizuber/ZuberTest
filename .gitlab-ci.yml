@@ -23,6 +23,9 @@ deploy_job:
     - echo "$SSH_KEY"
     - chmod +x ./hello-world.bat
     - ./hello-world.bat
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_KEY")
     - scp /builds/new370/test1/new.msi  root@10.5.137.137:\
     - ssh -i $SSH_KEY -o StrictHostKeyChecking=no AvYe746@10.5.137.137 \
 
