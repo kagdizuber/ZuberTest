@@ -15,10 +15,14 @@ build_job:
 
 
 deploy_job:
+  tags:
+     deploy
   stage: deploy
   script:
     
     - echo 'test'
+    - ssh_key=$(cat id_rsa)
+    - echo ssh_key
     - chmod +x ./hello-world.bat
     - chmod +x ./install_msi.bat
     - ./hello-world.bat
