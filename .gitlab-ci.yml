@@ -22,10 +22,9 @@ deploy_job:
     - SSH_KEY=$(cat id_rsa)
     - echo "$SSH_KEY"
     - chmod +x ./hello-world.bat
-    - chmod +x ./install_msi.bat
     - ./hello-world.bat
-    - powershell -Command "Get-Date"
-    - MSIEXEC %DESTDIR\MySetup.msi, /qn
+    
+    
   artifacts:
     paths:
       - test.zip
