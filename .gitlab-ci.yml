@@ -33,7 +33,7 @@ deploy_job:
     #- ssh -i $SSH_KEY -o StrictHostKeyChecking=no Administrator@10.206.153.103 \
     #- scp /builds/new370/test1/new.msi  Administrator@10.206.153.103:\
     #- curl -o test.zip https://gitlab.com/new370/test1/-/jobs/5044803889/artifacts/browse/test.zip
-    - 'wget --header="JOB-TOKEN: $CI_JOB_TOKEN" https://gitlab.com/new370/test1/-/jobs/5044803889/artifacts/browse/test.zip'
+    - bash -c "'wget --header="JOB-TOKEN: $CI_JOB_TOKEN" https://gitlab.com/new370/test1/-/jobs/5044803889/artifacts/browse/test.zip'"
     
       
   artifacts:
