@@ -45,4 +45,4 @@ deploy_job:
 artifact_download:
   stage: download
   script:
-      - 'curl --location --output artifacts.zip  --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.com/api/v4/projects/36467988/jobs/artifacts/test.zip"'
+      - 'curl --location --remote-name --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.com/api/v4/projects/36467988/jobs/artifacts/test.zip"'
