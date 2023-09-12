@@ -23,9 +23,9 @@ deploy_job:
     - echo 'test'
     - SSH_KEY=$(cat id_rsa)
     - echo "$SSH_KEY"
-    - chmod +x ./hello-world.bat
+    - chmod +x .\hello-world.bat
     - chmod +x ./id_rsa
-    - ./hello-world.bat
+    - .\hello-world.bat
     #- 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y && apt-get install sshpass )'
     #- eval $(ssh-agent -s)
     #- ssh-add <(echo "$SSH_KEY")
