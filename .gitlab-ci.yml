@@ -45,6 +45,8 @@ deploy_job:
 artifact_download:
   stage: download
   script:
+      - echo "GitLab CI/CD | Print all environment variables"
+      - env
       #- 'curl --location --remote-name --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.com/api/v4/projects/36467988/jobs/5046387077/artifacts/test.zip"'
       #- 'curl --location --remote-name -O "https://gitlab.com/api/v4/projects/36467988/jobs/artifacts/main/download?job=deploy"'
-      - 'curl -k --output "https://gitlab.com/api/v4/projects/36467988/jobs/5046387077/artifacts"'
+      #- 'curl -o test.zip "https://gitlab.com/api/v4/projects/36467988/jobs/5046387077/artifacts"'
