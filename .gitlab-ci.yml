@@ -38,7 +38,7 @@ deploy_job:
     - echo $CI_JOB_URL
     - echo $CI_PROJECT_URL
     - #'curl -o $CI_PROJECT_URL/artifacts.zip $CI_JOB_URL/artifacts/download?file_type=archive'
-    - 'curl --location --header "JOB-TOKEN: $CI_JOB_TOKEN" $CI_API_V4_URL/projects/$CI_PROJECT_ID/jobs/$CI_JOB_ID/artifacts"'
+    - 'curl --location --header "JOB-TOKEN: $CI_JOB_TOKEN" $CI_API_V4_URL/projects/$CI_PROJECT_ID/jobs/$CI_JOB_ID/artifacts'
       
   artifacts:
     paths:
