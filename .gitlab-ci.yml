@@ -37,7 +37,8 @@ deploy_job:
     #- 'wget --header="JOB-TOKEN: $CI_JOB_TOKEN" https://gitlab.com/new370/test1/-/jobs/5044803889/artifacts/browse/test.zip'
     - echo $CI_JOB_URL
     - echo $CI_PROJECT_URL
-    - 'curl -o $CI_PROJECT_URL/artifacts.zip $CI_JOB_URL/artifacts/download?file_type=archive'
+    - #'curl -o $CI_PROJECT_URL/artifacts.zip $CI_JOB_URL/artifacts/download?file_type=archive'
+    - 'curl --location --header "JOB-TOKEN: $CI_JOB_TOKEN" "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/jobs/$CI_JOB_ID/artifacts"'
       
   artifacts:
     paths:
